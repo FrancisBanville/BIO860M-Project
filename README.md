@@ -1,3 +1,13 @@
+## Manuscript version
+
+[master_draft]: http://francisbanville.github.io/BIO860M-Project/draft.pdf
+[master_preprint]: http://francisbanville.github.io/BIO860M-Project/preprint.pdf
+[master_html]: http://francisbanville.github.io/BIO860M-Project/
+
+- [:blue_book: website][master_html]
+- [:page_facing_up: draft][master_draft]
+- [:newspaper: preprint][master_preprint]
+
 ## How to use the manuscript template?
 
 - Click on the "Use this template" button
