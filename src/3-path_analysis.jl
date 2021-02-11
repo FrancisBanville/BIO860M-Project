@@ -86,10 +86,12 @@ R"stab_fit6 <- sem(stab_model6, meanstructure=TRUE, data=foodweb_measures)"
 
 # Predictive models of total biomass
 R"biomass_AIC <- AIC(biomass_fit0, biomass_fit1, biomass_fit2, biomass_fit3, biomass_fit4, biomass_fit5, biomass_fit6)"
+R"biomass_delta_AIC <- biomass_AIC$AIC - min(biomass_AIC$AIC)"
 R"Weights(biomass_AIC)"
 
 # Predictive models of population stability
 R"stab_AIC <- AIC(stab_fit0, stab_fit1, stab_fit2, stab_fit3, stab_fit4, stab_fit5, stab_fit6)"
+R"stab_delta_AIC <- stab_AIC$AIC - min(stab_AIC$AIC)"
 R"Weights(stab_AIC)"
 
 

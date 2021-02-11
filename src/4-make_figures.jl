@@ -49,5 +49,6 @@ yaxis!("Population stability")
 
 # Put all plots together
 plot(biomass_S, biomass_co, stab_S, stab_co,
-    layout=(2,2), size=(700,700),  margin=5Plots.mm, dpi=200)
+    layout=(2,2), size=(700,700),  margin=5Plots.mm, dpi=200,
+    title=["(a)" "(b)" "(c)" "(d)"], titleloc=:left, titlefont = font(8))
 savefig(joinpath("figures", "bivariate_relationships"))
