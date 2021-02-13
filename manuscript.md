@@ -13,7 +13,7 @@ bibliography: [references.bib]
 
 ## Data
 
-All food webs used in this study were queried from [`mangal.io`](https://mangal.io/#/), an extensive database of published ecological networks worldwide [@Poisot2016ManMak]. Networks archived on Mangal are multilayer networks, i.e. different types of interactions can be found in the same network. I considered as food webs all networks whose interactions were mainly of trophic type (i.e. predation and herbivory interactions). When writing these lines, 235 networks correspond to that definition. I removed the largest food web ($S$ = 714 species) from my dataset since it significantly increased total simulation time. My final dataset thus contained a total of 234 food webs whose number of species ranged between 5 and 106 ($\bar{S}$ = 32.6, $s$ = 19.1).
+All food webs used in this study were queried from , an extensive database of published ecological networks worldwide [@Poisot2016ManMak]. Networks archived on Mangal are multilayer networks, i.e. different types of interactions can be found in the same network. I considered as food webs all networks whose interactions were mainly of trophic type (i.e. predation and herbivory interactions). When writing these lines, 235 networks correspond to that definition. I removed the largest food web ($S$ = 714 species) from my dataset since it significantly increased total simulation time. My final dataset thus contained a total of 234 food webs whose number of species ranged between 5 and 106 ($\bar{S}$ = 32.6, $s$ = 19.1).
 
 ## Food-web measures and biomass flows
 
