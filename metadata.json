@@ -6,12 +6,14 @@
     {
       "affiliations": [
         "Université de Montréal",
-        "Université de Sherbrooke",
+        "Université de Sherbrooke"
       ],
       "familyname": "Banville",
       "givennames": "Francis",
       "email": "francis.banville@umontreal.ca",
       "orcid": "0000-0001-9051-0597"
     }
-  ]
+  ],
+  "description": "",
+  "keywords": ""
 }
