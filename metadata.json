@@ -1,5 +1,5 @@
 {
-  "title": "Linking biodiversity and food-web functioning: A bioenergetic approach",
+  "title": "Linking biodiversity and food-web functions: A bioenergetic approach",
   "license": "CC-BY",
   "language": "en",
   "creators": [
@@ -7,20 +7,11 @@
       "affiliations": [
         "Université de Montréal",
         "Université de Sherbrooke",
-        "Quebec Centre for Biodiversity Science"
       ],
       "familyname": "Banville",
       "givennames": "Francis",
       "email": "francis.banville@umontreal.ca",
       "orcid": "0000-0001-9051-0597"
     }
-  ],
-  "description": "The abstract goes here.",
-  "keywords": [
-    "biodiversity",
-    "ecological networks",
-    "ecosystem functioning",
-    "food webs",
-    "productivity"
   ]
 }
