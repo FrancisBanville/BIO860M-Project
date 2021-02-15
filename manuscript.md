@@ -51,11 +51,9 @@ All code and data to reproduce this project are available on GitHub (https://git
 
 # Results
 
-## Bivariate relationships
+## Model selection
 
-![**Bivariate relationships between food-web measures.** (a-b) Relationship between total biomass and (a) species richness and (b) connectance. The total biomass of a community represents the sum of biomass for all species averaged over the last 10 timesteps of the simulations. (c-d) Relationship between population stability and (c) species richness and (d) connectance. The temporal stability of population biomass was estimated using the negative coefficient of variation of biomass across populations averaged over the last 10 timesteps of the simulations. Species richness and connectance were measured before simulating. All simulations (n=221 webs) were run over 500 timesteps and were repeated 50 times for every food web archived on `mangal.io` (except for 14 webs where simulation failed). In each panel, error bars indicate the 95% percentile intervals of total biomass and population stability, respectively.](figures/bivariate_relationships.png){#fig:bivariate}
-
-## Selected model
+The most saturated model (model 6) was the best fit model for both the prediction of total biomass and population stability (@tbl:AIC). However, model 5 was also a really good fit to the data, with a $\Delta$ AIC of 4.1 for the two predicted variables. In both cases, model 6 had an Akaike weight of 88.7% and model 5 had the remaining 11.3%. Model 6 only differed from model 5 by the imposed relationship between species richness and nestedness. Therefore, using an ensemble model did not seem necessary to me. Model 6 was thus selected as the unique best structural equation model.
 
 | Model | df | $\Delta$ AIC$_{biomass}$ | $\Delta$ AIC$_{stability}$ |
 |:-----:|:--:|:------------------------:|:--------------------------:|
@@ -69,6 +67,11 @@ All code and data to reproduce this project are available on GitHub (https://git
 
 Table: **Model selection.** The difference of AIC scores between each model and the best model were computed for the two sets of models (i.e. the predictive models of total biomass and of population stability). Model 6 was the best model for both sets according to the information criterion. {#tbl:AIC}
 
+## Path analysis
+
+All direct and indirect relationships between measures of ecosystem functioning, biodiversity and food-web structure were analyzed using model 6. Regression coefficients between pairs of variables are listed in @tbl:path_biomass for the prediction of total biomass and in @tbl:path_stability for the prediction of population stability.
+
+The total biomass of the community after simulation was positively associated with the total number of species and the nestedness of food webs at the beginning of the simulation, but negatively associated with connectance (@tbl:path_biomass). However, since both measures of food-web structure were associated with species richness, species richness also shaped total biomass through these indirect pathways.
 
 | Coefficient  | estimate | z-value | p-value     |
 |:------------:|:--------:|:-------:|:-----------:|
@@ -81,6 +84,7 @@ Table: **Model selection.** The difference of AIC scores between each model and 
 
 Table: **Results of the path analysis for the prediction of total biomass using model 6.** All regression coefficients were signifiant at the significance level of $\alpha$ = 0.05 ($Y$ = total biomass, $S$ = species richness, $C$ = connectance, $N$ = nestedness). Model 6 was selected according to the information criterion. {#tbl:path_biomass}
 
+These relationships were weaker when model 6 was used to predict population stability (@tbl:path_stability). Population stability was not significantly associated with either measure of network structure, but was only weakly associated with species richness.
 
 | Coefficient  | estimate | z-value | p-value     |
 |:------------:|:--------:|:-------:|:-----------:|
@@ -92,6 +96,10 @@ Table: **Results of the path analysis for the prediction of total biomass using 
 | $\beta_{CS}$ |   -0.002 |    -8.7 |  < 0.001*** |
 
 Table: **Results of the path analysis for the prediction of population stability using model 6.** All regression coefficients were signifiant at the significance level of $\alpha$ = 0.05, except for $\beta_{YC}$ and $\beta_{YN}$ ($Y$ = population stability, $S$ = species richness, $C$ = connectance, $N$ = nestedness). Model 6 was selected according to the information criterion. {#tbl:path_stability}
+
+Bivariate relationships between measures of ecosystem functioning and measures of biodiversity and food-web structure were plotted in @fig:bivariate. We can identify the positive relationship between total biomass and species richness, and its negative relationship with connectance. However, the confidence intervals around the point estimates of total biomass were wider for food webs with more species and narrower for networks with high connectance. On the other hand, the weak relationship between population stability and species richness is not easily observable in @fig:bivariate.
+
+![**Bivariate relationships between food-web measures.** (a-b) Relationship between total biomass and (a) species richness and (b) connectance. The total biomass of a community represents the sum of biomass for all species averaged over the last 10 timesteps of the simulations. (c-d) Relationship between population stability and (c) species richness and (d) connectance. The temporal stability of population biomass was estimated using the negative coefficient of variation of biomass across populations averaged over the last 10 timesteps of the simulations. Species richness and connectance were measured before simulating. All simulations (n=221 webs) were run over 500 timesteps and were repeated 50 times for every food web archived on `mangal.io` (except for the largest web and 13 webs where simulation failed). In each panel, error bars indicate the 95% percentile intervals of total biomass and population stability, respectively.](figures/bivariate_relationships.png){#fig:bivariate}
 
 # Discussion
 
