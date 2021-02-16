@@ -103,4 +103,18 @@ Bivariate relationships between measures of ecosystem functioning and measures o
 
 # Discussion
 
+## Biodiversity and ecosystem functioning: direct pathways
+
+My study suggests that biodiversity remains an important driver of ecosystem functioning, independently of food-web structure. First, the total biomass of a biological community at the end of my simulations increased with the total number of species. The positive relationship between biomass productivity and species richness uncovered in my study was previously observed in various systems and taxa [@Mittelbach2001WhaObs] and at different spatial scales [@Gonzalez2020ScaBio]. More diverse systems might indeed use resources and nutrients more efficiently than homogeneous communities because of niche complementarities [@Tilman1996ProSus].
+
+Moreover, I found that the temporal stability of species biomass also increased with species richness. This is in agreement with the work of @Ives2000StaSpe and @Gross2014SpeRic. Species typically have different levels of tolerance to the variation of environmental conditions and to the variation of other species' abundances. A decrease of biomass from a given species might be compensated by an increase of biomass from another species in the community. A high number of species might promote ecosystem stability because of a higher probability of finding complementary species. However, the positive relationship between population stability and species richness uncovered in this study seems to be in disagreement with the work of @May1972WilLar, @Allesina2012StaCrib, and @MacDonald2020RevLin, who found that the probability of a network to be stable decreases with species richness. This might however be due to differences in the definitions and measures used to describe ecosystem stability (biomass stability vs food-web stability).
+
+The relationship between other measures of biodiversity, such as species evenness and measures of $\beta$-diversity, and ecosystem functioning should also be investigated alongside measures of network structure. This might unveil intriguing aspects of the BEF relationship in the light of food-web structure.
+
+## Biodiversity and ecosystem functioning: indirect pathways
+
+Species richness also drove food-web functioning through indirect pathways. For example, species richness was negatively associated with food-web connectance, which was positively associated with total biomass. This was however in contrast with the relationship between species richness and population stability, which did not have any indirect pathways through food-web structure.
+
+The bioenergetic model of biomass flows of @Yodzis1992BodSiz and @Delmas2017SimBio allowed me to simulate ecosystem functioning of many published food webs. This model was useful to make first order predictions of total biomass and population stability. However, many parameter values were set to their default values or sampled from a non-biased distribution (i.e. a uniform distribution), although they were probably system specific. To the best of my knowledge, no empirical data was available to validate this choice of parameter values in a broad range of food webs. When collecting data on species interactions, ecologists should estimate as much as possible the biomass of individual species. This would enable the conduction of more extensive studies on biodiversity and ecosystem functioning. Overall, my results nevertheless highlight the importance of considering network structure when describing the biodiversity-ecosystem functioning (BEF) relationship, especially with regards to biomass production.
+
 # References
