@@ -1,0 +1,1002 @@
+[
+    {
+        "DOI": "10.1038/nature10832",
+        "URL": "https://www.nature.com/articles/nature10832",
+        "author": [
+            {
+                "family": "Allesina",
+                "given": "Stefano"
+            },
+            {
+                "family": "Tang",
+                "given": "Si"
+            }
+        ],
+        "container-title": "Nature",
+        "id": "Allesina2012StaCrib",
+        "issue": "7388, 7388",
+        "issued": {
+            "date-parts": [
+                [
+                    2012,
+                    3
+                ]
+            ]
+        },
+        "page": "205-208",
+        "publisher": "Nature Publishing Group",
+        "title": "Stability criteria for complex ecosystems",
+        "type": "article-journal",
+        "volume": "483"
+    },
+    {
+        "DOI": "10.1046/j.1461-0248.2002.00350.x",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1461-0248.2002.00350.x",
+        "author": [
+            {
+                "family": "Bond",
+                "given": "Emily M."
+            },
+            {
+                "family": "Chase",
+                "given": "Jonathan M."
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "Bond2002BioEco",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2002
+                ]
+            ]
+        },
+        "page": "467-470",
+        "title": "Biodiversity and ecosystem functioning at local and regional spatial scales",
+        "type": "article-journal",
+        "volume": "5"
+    },
+    {
+        "DOI": "10.1111/j.1461-0248.2004.00591.x",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1461-0248.2004.00591.x",
+        "author": [
+            {
+                "family": "Dangles",
+                "given": "Olivier"
+            },
+            {
+                "family": "Malmqvist",
+                "given": "Bj\u00f6rn"
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "Dangles2004SpeRic",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2004
+                ]
+            ]
+        },
+        "page": "395-402",
+        "title": "Species richness\u2013decomposition relationships depend on species dominance",
+        "type": "article-journal",
+        "volume": "7"
+    },
+    {
+        "DOI": "10.1111/2041-210X.12713",
+        "URL": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12713",
+        "author": [
+            {
+                "family": "Delmas",
+                "given": "Eva"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            }
+        ],
+        "container-title": "Methods in Ecology and Evolution",
+        "id": "Delmas2017SimBio",
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "page": "881-886",
+        "title": "Simulations of biomass dynamics in community food webs",
+        "type": "article-journal",
+        "volume": "8"
+    },
+    {
+        "DOI": "10.5281/zenodo.4426680",
+        "URL": "https://zenodo.org/record/4426680#.YCgr5WhKhPY",
+        "author": [
+            {
+                "family": "Delmas",
+                "given": "Eva"
+            },
+            {
+                "family": "Bideault",
+                "given": "Azenor"
+            },
+            {
+                "family": "Clegg",
+                "given": "Tom"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            }
+        ],
+        "id": "Delmas2021SimBio",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    1,
+                    7
+                ]
+            ]
+        },
+        "publisher": "Zenodo",
+        "title": "Simulations of biomass dynamics and extinctions in food webs",
+        "type": "book"
+    },
+    {
+        "DOI": "10.1046/j.1461-0248.2002.00354.x",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1461-0248.2002.00354.x",
+        "author": [
+            {
+                "family": "Dunne",
+                "given": "Jennifer A."
+            },
+            {
+                "family": "Williams",
+                "given": "Richard J."
+            },
+            {
+                "family": "Martinez",
+                "given": "Neo D."
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "Dunne2002NetStr",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2002
+                ]
+            ]
+        },
+        "other-ids": "DunnWill02a,DunnWill02c",
+        "page": "558-567",
+        "publisher": "Blackwell Publishing Ltd",
+        "publisher-place": "Oxford",
+        "title": "Network structure and biodiversity loss in food webs: Robustness increases with connectance",
+        "type": "article-journal",
+        "volume": "5"
+    },
+    {
+        "DOI": "10.1111/j.1365-2656.2010.01688.x",
+        "URL": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2656.2010.01688.x",
+        "author": [
+            {
+                "family": "Fortuna",
+                "given": "Miguel A."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Olesen",
+                "given": "Jens M."
+            },
+            {
+                "family": "Jordano",
+                "given": "Pedro"
+            },
+            {
+                "family": "Mouillot",
+                "given": "David"
+            },
+            {
+                "family": "Krasnov",
+                "given": "Boris R."
+            },
+            {
+                "family": "Poulin",
+                "given": "Robert"
+            },
+            {
+                "family": "Bascompte",
+                "given": "Jordi"
+            }
+        ],
+        "container-title": "Journal of Animal Ecology",
+        "id": "Fortuna2010NesModa",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "page": "811-817",
+        "title": "Nestedness versus modularity in ecological networks: Two sides of the same coin?",
+        "type": "article-journal",
+        "volume": "79"
+    },
+    {
+        "DOI": "10.1371/journal.pone.0016143",
+        "URL": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0016143",
+        "author": [
+            {
+                "family": "G\u00f3mez",
+                "given": "Jos\u00e9 M."
+            },
+            {
+                "family": "Perfectti",
+                "given": "Francisco"
+            },
+            {
+                "family": "Jordano",
+                "given": "Pedro"
+            }
+        ],
+        "container-title": "PLOS ONE",
+        "id": "Gomez2011FunCona",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    1,
+                    25
+                ]
+            ]
+        },
+        "page": "e16143",
+        "publisher": "Public Library of Science",
+        "title": "The Functional Consequences of Mutualistic Network Architecture",
+        "type": "article-journal",
+        "volume": "6"
+    },
+    {
+        "DOI": "10.1111/ele.13456",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.13456",
+        "author": [
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Germain",
+                "given": "Rachel M."
+            },
+            {
+                "family": "Srivastava",
+                "given": "Diane S."
+            },
+            {
+                "family": "Filotas",
+                "given": "Elise"
+            },
+            {
+                "family": "Dee",
+                "given": "Laura E."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Thompson",
+                "given": "Patrick L."
+            },
+            {
+                "family": "Isbell",
+                "given": "Forest"
+            },
+            {
+                "family": "Wang",
+                "given": "Shaopeng"
+            },
+            {
+                "family": "K\u00e9fi",
+                "given": "Sonia"
+            },
+            {
+                "family": "Montoya",
+                "given": "Jose"
+            },
+            {
+                "family": "Zelnik",
+                "given": "Yuval R."
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "Gonzalez2020ScaBio",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "page": "757-776",
+        "title": "Scaling-up biodiversity-ecosystem functioning research",
+        "type": "article-journal",
+        "volume": "23"
+    },
+    {
+        "DOI": "10.1086/673915",
+        "URL": "https://www.journals.uchicago.edu/doi/full/10.1086/673915",
+        "author": [
+            {
+                "family": "Gross",
+                "given": "Kevin"
+            },
+            {
+                "family": "Cardinale",
+                "given": "Bradley J."
+            },
+            {
+                "family": "Fox",
+                "given": "Jeremy W."
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            },
+            {
+                "family": "Wayne Polley",
+                "given": "H."
+            },
+            {
+                "family": "Reich",
+                "given": "Peter B."
+            },
+            {
+                "family": "Ruijven",
+                "given": "Jasper",
+                "non-dropping-particle": "van"
+            }
+        ],
+        "container-title": "The American Naturalist",
+        "id": "Gross2014SpeRic",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2014,
+                    1,
+                    1
+                ]
+            ]
+        },
+        "page": "1-12",
+        "publisher": "The University of Chicago Press",
+        "title": "Species Richness and the Temporal Stability of Biomass Production: A New Analysis of Recent Biodiversity Experiments.",
+        "type": "article-journal",
+        "volume": "183"
+    },
+    {
+        "DOI": "10.1038/nature22899",
+        "URL": "https://www.nature.com/articles/nature22899",
+        "author": [
+            {
+                "family": "Isbell",
+                "given": "Forest"
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            },
+            {
+                "family": "Cowles",
+                "given": "Jane"
+            },
+            {
+                "family": "D\u00edaz",
+                "given": "Sandra"
+            },
+            {
+                "family": "Hector",
+                "given": "Andy"
+            },
+            {
+                "family": "Mace",
+                "given": "Georgina M."
+            },
+            {
+                "family": "Wardle",
+                "given": "David A."
+            },
+            {
+                "family": "O\u2019Connor",
+                "given": "Mary I."
+            },
+            {
+                "family": "Duffy",
+                "given": "J. Emmett"
+            },
+            {
+                "family": "Turnbull",
+                "given": "Lindsay A."
+            },
+            {
+                "family": "Thompson",
+                "given": "Patrick L."
+            },
+            {
+                "family": "Larigauderie",
+                "given": "Anne"
+            }
+        ],
+        "container-title": "Nature",
+        "id": "Isbell2017LinInf",
+        "issue": "7656, 7656",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    6
+                ]
+            ]
+        },
+        "page": "65-72",
+        "publisher": "Nature Publishing Group",
+        "title": "Linking the influence and dependence of people on biodiversity across scales",
+        "type": "article-journal",
+        "volume": "546"
+    },
+    {
+        "DOI": "10.1046/j.1461-0248.2000.00144.x",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1461-0248.2000.00144.x",
+        "author": [
+            {
+                "family": "Ives",
+                "given": "A. R."
+            },
+            {
+                "family": "Klug",
+                "given": "J. L."
+            },
+            {
+                "family": "Gross",
+                "given": "K."
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "Ives2000StaSpe",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2000
+                ]
+            ]
+        },
+        "page": "399-411",
+        "title": "Stability and species richness in complex communities",
+        "type": "article-journal",
+        "volume": "3"
+    },
+    {
+        "DOI": "10.1034/j.1600-0706.2000.910101.x",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-0706.2000.910101.x",
+        "author": [
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            }
+        ],
+        "container-title": "Oikos",
+        "id": "Loreau2000BioEco",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2000
+                ]
+            ]
+        },
+        "page": "3-17",
+        "title": "Biodiversity and ecosystem functioning: Recent theoretical advances",
+        "type": "article-journal",
+        "volume": "91"
+    },
+    {
+        "DOI": "10.1016/j.patter.2020.100079",
+        "URL": "https://www.cell.com/patterns/abstract/S2666-3899(20)30107-0",
+        "author": [
+            {
+                "family": "MacDonald",
+                "given": "Arthur Andrew Meahan"
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            }
+        ],
+        "container-title": "Patterns",
+        "id": "MacDonald2020RevLin",
+        "issue": "0",
+        "issued": {
+            "date-parts": [
+                [
+                    2020,
+                    7,
+                    29
+                ]
+            ]
+        },
+        "other-ids": "MacDBanv20a",
+        "publisher": "Elsevier",
+        "title": "Revisiting the Links-Species Scaling Relationship in Food Webs",
+        "type": "article-journal",
+        "volume": "0"
+    },
+    {
+        "DOI": "10.1038/238413a0",
+        "URL": "https://www.nature.com/articles/238413a0",
+        "author": [
+            {
+                "family": "May",
+                "given": "Robert M."
+            }
+        ],
+        "container-title": "Nature",
+        "id": "May1972WilLar",
+        "issue": "5364, 5364",
+        "issued": {
+            "date-parts": [
+                [
+                    1972,
+                    8
+                ]
+            ]
+        },
+        "page": "413-414",
+        "publisher": "Nature Publishing Group",
+        "title": "Will a Large Complex System be Stable?",
+        "type": "article-journal",
+        "volume": "238"
+    },
+    {
+        "DOI": "10.1890/0012-9658(2001)082[2381:WITORB]2.0.CO;2",
+        "URL": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658",
+        "author": [
+            {
+                "family": "Mittelbach",
+                "given": "Gary G."
+            },
+            {
+                "family": "Steiner",
+                "given": "Christopher F."
+            },
+            {
+                "family": "Scheiner",
+                "given": "Samuel M."
+            },
+            {
+                "family": "Gross",
+                "given": "Katherine L."
+            },
+            {
+                "family": "Reynolds",
+                "given": "Heather L."
+            },
+            {
+                "family": "Waide",
+                "given": "Robert B."
+            },
+            {
+                "family": "Willig",
+                "given": "Michael R."
+            },
+            {
+                "family": "Dodson",
+                "given": "Stanley I."
+            },
+            {
+                "family": "Gough",
+                "given": "Laura"
+            }
+        ],
+        "container-title": "Ecology",
+        "id": "Mittelbach2001WhaObs",
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2001
+                ]
+            ]
+        },
+        "page": "2381-2396",
+        "title": "What Is the Observed Relationship Between Species Richness and Productivity?",
+        "type": "article-journal",
+        "volume": "82"
+    },
+    {
+        "URL": "http://books.google.com?id=YpQRDAAAQBAJ",
+        "author": [
+            {
+                "family": "Pascual",
+                "given": "Department of Ecology and Evolutionary Biology Mercedes"
+            },
+            {
+                "family": "Pascual",
+                "given": "Mercedes"
+            },
+            {
+                "family": "Dunne",
+                "given": "Jennifer A."
+            },
+            {
+                "family": "Dunne",
+                "given": "Jennifer A."
+            },
+            {
+                "family": "Dunne",
+                "given": "Visiting Professor Jennifer A."
+            }
+        ],
+        "id": "Pascual2006EcoNet",
+        "issued": {
+            "date-parts": [
+                [
+                    2006
+                ]
+            ]
+        },
+        "publisher": "Oxford University Press, USA",
+        "title": "Ecological Networks: Linking Structure to Dynamics in Food Webs",
+        "type": "book"
+    },
+    {
+        "DOI": "10.7717/peerj.251",
+        "URL": "https://peerj.com/articles/251",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "container-title": "PeerJ",
+        "id": "Poisot2014WheEco",
+        "issued": {
+            "date-parts": [
+                [
+                    2014,
+                    2,
+                    4
+                ]
+            ]
+        },
+        "page": "e251",
+        "publisher": "PeerJ Inc.",
+        "title": "When is an ecological network complex? Connectance drives degree distribution and emerging network properties",
+        "type": "article-journal",
+        "volume": "2"
+    },
+    {
+        "DOI": "10.1111/ecog.00976",
+        "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ecog.00976",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            },
+            {
+                "family": "Baiser",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Dunne",
+                "given": "Jennifer A."
+            },
+            {
+                "family": "K\u00e9fi",
+                "given": "Sonia"
+            },
+            {
+                "family": "Massol",
+                "given": "Fran\u00e7ois"
+            },
+            {
+                "family": "Mouquet",
+                "given": "Nicolas"
+            },
+            {
+                "family": "Romanuk",
+                "given": "Tamara N."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Wood",
+                "given": "Spencer A."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "container-title": "Ecography",
+        "id": "Poisot2016ManMak",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "page": "384-390",
+        "title": "Mangal \u2013 making ecological network analysis simple",
+        "type": "article-journal",
+        "volume": "39"
+    },
+    {
+        "DOI": "10.1111/ecog.00983",
+        "URL": "https://www.onlinelibrary.wiley.com/doi/abs/10.1111/ecog.00983",
+        "author": [
+            {
+                "family": "Schleuning",
+                "given": "Matthias"
+            },
+            {
+                "family": "Fr\u00fcnd",
+                "given": "Jochen"
+            },
+            {
+                "family": "Garc\u00eda",
+                "given": "Daniel"
+            }
+        ],
+        "container-title": "Ecography",
+        "id": "Schleuning2015PreEco",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "page": "380-392",
+        "title": "Predicting ecosystem functions from biodiversity and mutualistic networks: An extension of trait-based concepts to plant\u2013animal interactions",
+        "type": "article-journal",
+        "volume": "38"
+    },
+    {
+        "DOI": "10.1038/ncomms2422",
+        "URL": "https://www.nature.com/articles/ncomms2422/briefing/signup/",
+        "author": [
+            {
+                "family": "Staniczenko",
+                "given": "Phillip P. A."
+            },
+            {
+                "family": "Kopp",
+                "given": "Jason C."
+            },
+            {
+                "family": "Allesina",
+                "given": "Stefano"
+            }
+        ],
+        "container-title": "Nature Communications",
+        "id": "Staniczenko2013GhoNesa",
+        "issue": "1, 1",
+        "issued": {
+            "date-parts": [
+                [
+                    2013,
+                    1,
+                    22
+                ]
+            ]
+        },
+        "page": "1391",
+        "publisher": "Nature Publishing Group",
+        "title": "The ghost of nestedness in ecological networks",
+        "type": "article-journal",
+        "volume": "4"
+    },
+    {
+        "DOI": "10.1038/379718a0",
+        "URL": "https://www.nature.com/articles/379718a0",
+        "author": [
+            {
+                "family": "Tilman",
+                "given": "David"
+            },
+            {
+                "family": "Wedin",
+                "given": "David"
+            },
+            {
+                "family": "Knops",
+                "given": "Johannes"
+            }
+        ],
+        "container-title": "Nature",
+        "id": "Tilman1996ProSus",
+        "issue": "6567, 6567",
+        "issued": {
+            "date-parts": [
+                [
+                    1996,
+                    2
+                ]
+            ]
+        },
+        "page": "718-720",
+        "publisher": "Nature Publishing Group",
+        "title": "Productivity and sustainability influenced by biodiversity in grassland ecosystems",
+        "type": "article-journal",
+        "volume": "379"
+    },
+    {
+        "DOI": "10.1016/j.tree.2003.09.003",
+        "URL": "https://www.sciencedirect.com/science/article/pii/S0169534703002799",
+        "author": [
+            {
+                "family": "Worm",
+                "given": "Boris"
+            },
+            {
+                "family": "Duffy",
+                "given": "J. Emmett"
+            }
+        ],
+        "container-title": "Trends in Ecology & Evolution",
+        "id": "Worm2003BioPro",
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2003,
+                    12,
+                    1
+                ]
+            ]
+        },
+        "page": "628-632",
+        "title": "Biodiversity, productivity and stability in real food webs",
+        "type": "article-journal",
+        "volume": "18"
+    },
+    {
+        "DOI": "10.1086/285380",
+        "URL": "https://www.journals.uchicago.edu/doi/abs/10.1086/285380",
+        "author": [
+            {
+                "family": "Yodzis",
+                "given": "P."
+            },
+            {
+                "family": "Innes",
+                "given": "S."
+            }
+        ],
+        "container-title": "The American Naturalist",
+        "id": "Yodzis1992BodSiz",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    1992,
+                    6,
+                    1
+                ]
+            ]
+        },
+        "page": "1151-1175",
+        "publisher": "The University of Chicago Press",
+        "title": "Body Size and Consumer-Resource Dynamics",
+        "type": "article-journal",
+        "volume": "139"
+    },
+    {
+        "DOI": "10.1016/j.biortech.2009.10.001",
+        "URL": "https://www.sciencedirect.com/science/article/pii/S0960852409013418",
+        "author": [
+            {
+                "family": "Zhang",
+                "given": "Chong-Bang"
+            },
+            {
+                "family": "Wang",
+                "given": "Jiang"
+            },
+            {
+                "family": "Liu",
+                "given": "Wen-Li"
+            },
+            {
+                "family": "Zhu",
+                "given": "Si-Xi"
+            },
+            {
+                "family": "Liu",
+                "given": "Dong"
+            },
+            {
+                "family": "Chang",
+                "given": "Scott X"
+            },
+            {
+                "family": "Chang",
+                "given": "Jie"
+            },
+            {
+                "family": "Ge",
+                "given": "Ying"
+            }
+        ],
+        "container-title": "Bioresource Technology",
+        "id": "Zhang2010EffPla",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2010,
+                    3,
+                    1
+                ]
+            ]
+        },
+        "page": "1686-1692",
+        "title": "Effects of plant diversity on nutrient retention and enzyme activities in a full-scale constructed wetland",
+        "type": "article-journal",
+        "volume": "101"
+    }
+]

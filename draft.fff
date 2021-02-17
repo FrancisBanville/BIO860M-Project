@@ -1,0 +1,21 @@
+\begin{figure}
+\hypertarget{fig:bivariate}{%
+\centering
+\includegraphics{figures/bivariate_relationships.png}
+\caption{\textbf{Bivariate relationships between food-web measures.}
+(a-b) Relationship between total biomass and (a) species richness and
+(b) connectance. The total biomass of a community represents the sum of
+biomass for all species averaged over the last 10 timesteps of the
+simulations. (c-d) Relationship between population stability and (c)
+species richness and (d) connectance. The temporal stability of
+population biomass was estimated using the negative coefficient of
+variation of biomass across populations averaged over the last 10
+timesteps of the simulations. Species richness and connectance were
+measured before simulating. All simulations (n=221 webs) were run over
+500 timesteps and were repeated 50 times for every food web archived on
+\texttt{mangal.io} (except for the largest web and 13 webs where
+simulation failed). In each panel, error bars indicate the 95\%
+percentile intervals of total biomass and population stability,
+respectively.}\label{fig:bivariate}
+}
+\end{figure}

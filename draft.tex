@@ -1,0 +1,923 @@
+%!TEX TS-program = xelatex
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{stix}
+\usepackage[scaled]{helvet}
+\usepackage[scaled]{inconsolata}
+
+\usepackage{lastpage}
+
+\usepackage{setspace}
+
+\usepackage{ccicons}
+
+\usepackage[hang,flushmargin]{footmisc}
+
+\usepackage{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\makeatletter
+\newcounter{tableno}
+\newenvironment{tablenos:no-prefix-table-caption}{
+  \caption@ifcompatibility{}{
+    \let\oldthetable\thetable
+    \let\oldtheHtable\theHtable
+    \renewcommand{\thetable}{tableno:\thetableno}
+    \renewcommand{\theHtable}{tableno:\thetableno}
+    \stepcounter{tableno}
+    \captionsetup{labelformat=empty}
+  }
+}{
+  \caption@ifcompatibility{}{
+    \captionsetup{labelformat=default}
+    \let\thetable\oldthetable
+    \let\theHtable\oldtheHtable
+    \addtocounter{table}{-1}
+  }
+}
+\makeatother
+
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+
+\usepackage[breaklinks=true]{hyperref}
+\hypersetup{colorlinks,%
+citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
+\usepackage{url}
+
+\usepackage{caption}
+\setcounter{secnumdepth}{0}
+\usepackage{cleveref}
+
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc} % for \widthof, \maxof
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}\geometry{verbose,letterpaper,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=4.5cm}
+
+\usepackage{lineno}
+\usepackage[nolists,noheads]{endfloat}
+
+\pagestyle{plain}
+
+\doublespacing
+
+\fancypagestyle{normal}
+{
+  \fancyhf{}
+  \fancyfoot[R]{\footnotesize\sffamily\thepage\ of \pageref*{LastPage}}
+}
+\begin{document}
+\thispagestyle{empty}
+{\Large\bfseries\sffamily Linking biodiversity and food-web functions: A
+bioenergetic approach}
+\vskip 5em
+
+Francis\,Banville\,\textsuperscript{1,2,*}
+
+\textsuperscript{1}\,Université de
+Montréal\quad \textsuperscript{2}\,Université de Sherbrooke
+
+\textsuperscript{*}\,\,\texttt{francis.banville@umontreal.ca}
+
+\vfill
+This work is released by its authors under a CC-BY 4.0 license\hfill\ccby\\
+Last revision: \emph{\today}
+
+\clearpage
+\thispagestyle{empty}
+
+\vfill
+\textbf{\sffamily Abstract: }Biodiversity drives various aspects of
+ecosystem functioning, including biomass production and community
+stability. However, many measures of network structure are also
+associated with ecosystem functioning. Considering the scaling of
+network structure with species richness, the effect of biodiversity on
+the functioning of ecological communities might partly be due to its
+intimate relationship with network structure. Here I describe the
+biodiversity-ecosystem functioning (BEF) relationship under the unifying
+framework of ecological networks. Simulating biomass flows in food webs
+and comparing different structural equation models, I show that BEF
+relationships are best described by both direct and indirect effects of
+biodiversity on ecosystem functioning.
+\vfill
+
+\clearpage
+\linenumbers
+\pagestyle{normal}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+One of the main reasons for preserving biodiversity is to maintain
+ecosystem services, which are supported by associated ecological
+processes (Isbell et al. 2017). Perhaps the simplest and most studied
+measure of biodiversity is species richness (i.e.~the number of species
+in a biological community). Species richness has been associated to
+various ecological functions, including nutrient retention (Zhang et al.
+2010), decomposition (Dangles and Malmqvist 2004), productivity
+(Mittelbach et al. 2001), and ecosystem stability (Ives, Klug, and Gross
+2000). The biodiversity-ecosystem functioning (BEF) relationships
+describe these associations, and one of the main goals of biodiversity
+science has been to understand the mechanisms driving these
+relationships in various systems. Niche complementarity (Loreau 2000),
+species regional complementarity (Bond and Chase 2002), and mutualistic
+interactions (Schleuning, Fründ, and García 2015) are examples of
+well-known mechanisms responsable for the BEF relationships.
+
+The structure of ecological networks has also been associated with
+ecosystem functioning and other ecological processes (Pascual et al.
+2006; Gómez, Perfectti, and Jordano 2011). For example, food webs having
+a high connectance (i.e.~highly connected webs) are typically more
+robust to random losses of species (Dunne, Williams, and Martinez 2002).
+Trophic interactions can also directly impact ecosystem productivity
+(Worm and Duffy 2003).
+
+Because of the scaling of many measures of network structure with
+species richness, including connectance (MacDonald, Banville, and Poisot
+2020), it is difficult to disentangle the direct effects of biodiversity
+on ecosystem functioning from its indirect effets trough food-web
+structure. In other words, are biodiversity-functioning relationships in
+food webs mainly driven by their total number of species or by their
+emerging structure? This knowledge will notably help us implement better
+conservation strategies by targeting more specifically different
+ecosystem properties to preserve. I expect that both direct and indirect
+effects should be important pathways in BEF relationships. In this
+study, I will examine what drives biomass production and population
+stability in food webs. To do so, I will simulate biomass flows using a
+bioenergetic model of food-web dynamics and compare different structural
+equation models of biodiversity (i.e.~species richness), food-web
+structure, and ecosystem functions.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{data}{%
+\subsection{Data}\label{data}}
+
+All food webs used in this study were queried from
+\href{https://mangal.io/\#/}{\texttt{mangal.io}}, an extensive database
+of published ecological networks worldwide (Poisot et al. 2016).
+Networks archived on Mangal are multilayer networks, i.e.~different
+types of interactions can be found in the same network. I considered as
+food webs all networks whose interactions were mainly of trophic type
+(i.e.~predation and herbivory interactions). When writing these lines,
+235 networks correspond to that definition. I removed the largest food
+web (\(S\) = 714 species) from my dataset since it significantly
+increased total simulation time. My final dataset thus contained a total
+of 234 food webs whose number of species ranged between 5 and 106
+(\(\bar{S}\) = 32.6, \(s\) = 19.1).
+
+\hypertarget{food-web-measures-and-biomass-flows}{%
+\subsection{Food-web measures and biomass
+flows}\label{food-web-measures-and-biomass-flows}}
+
+I measured \(\alpha\)-diversity by the number of nodes (species) \(S\)
+in each network. Food-web structure was also described by their
+connectance and nestedness. Connectance represents the proportion of
+realized links in ecological networks (\(C=L/S^2\), where \(L\) is the
+number of interactions), and has been associated with many other
+properties of network structure (Poisot and Gravel 2014), including
+nestedness. The nestedness of an ecological network represents the
+extent to which species interacting with specialists are a subset of
+species interacting with generalists. Nestedness was estimated by the
+spectral radius (i.e.~the largest eigenvalue) of the adjacency matrix
+(Staniczenko, Kopp, and Allesina 2013). Because of its tight association
+with network modularity (Fortuna et al. 2010), computing the nestedness
+of a network is comparable to estimating its modularity (i.e.~network
+compartmentalization). However, nestedness is perhaps orders of
+magnitude easier and faster to measure than modularity.
+
+Moreover, ecosystem functioning was simulated using the model of Yodzis
+and Innes (1992) of biomass flows in food webs, implemented in Julia
+v0.7.0 or newer (Delmas et al. 2021). Indeed, to the best of my
+knowledge, no extensive dataset of species interactions and ecosystem
+functioning were available. In this context, I had to rely on
+first-order simulations to conduct my analysis. All model parameters
+(e.g.~carrying capacities, body-mass ratios, growth rates, coefficients
+of interspecific competition, \emph{etc.}) were kept to their default
+values (Delmas et al. 2017, 2021). In the absence of empirical data on
+species biomass, the initial biomass of every species in the model were
+sampled from a uniform distribution \(U(0,1)\). This ensured that no
+further biases regarding initial values were introduced arbitrarily in
+the simulation process. Simulations of biomass flows were performed for
+500 timesteps, and repeated 50 times for each food web. Because 13 food
+webs could not be simulated appropriately, I ended up with 221 simulated
+webs whose total biomass and population stability were measured and
+averaged over the last 10 timesteps. Total biomass was estimated as the
+sum of all species biomass at the end of simulation, whereas population
+stability was measured as the mean of the negative coefficient of
+variation of species biomass (Delmas et al. 2017). I used the total
+biomass at the end of the simulation as a proxy of biomass production. I
+identified the median of both simulated measures for each web, as well
+as their 95\% percentile intervals (2.5\% and 97.5\% quantiles).
+
+\hypertarget{structural-equation-models}{%
+\subsection{Structural equation
+models}\label{structural-equation-models}}
+
+To identify which emerging ecosystem properties drove the functioning of
+food webs, I evaluated the fit of seven structural equation models
+(SEMs) against my measured and simulated data. The most saturated model
+(model 6) is represented by eq.~\ref{eq:mod6}.
+
+\[Y = \beta_0 + \beta_{YS}S + \beta_{YC}C + \beta_{YN}N\]
+\[ N = \beta_1 + \beta_{NS}S + \beta_{NC}C\]
+\begin{equation}\protect\hypertarget{eq:mod6}{}{ C = \beta_2 + \beta_{CS}S, }\label{eq:mod6}\end{equation}
+
+where \(Y\) is the predicted variable (i.e.~either total biomass or
+population stability), \(S\) is species richness, \(C\) the connectance,
+and \(N\) the nestedness of all food webs. The subscripts \({ij}\) of
+the parameters indicate the hypothesized causal relationship between the
+corresponding variables \(i\) and \(j\) (i.e.~\(j \rightarrow i\)). The
+parameters \(\beta_0\), \(\beta_1\), and \(\beta_2\) are the model
+intercepts. All parameters were estimated in model 6 using the
+\texttt{lavaan} package v.0.6-7 in R. I imposed further structure on the
+other six models (see tbl.~\ref{tbl:models}).
+
+\hypertarget{tbl:models}{}
+\begin{longtable}[]{@{}cccccccccc@{}}
+\caption{\label{tbl:models}\textbf{Model sets.} Every parameter was
+either estimated (value=1) or not (value=0) in each of the seven
+structural equation models. The subscripts \({ij}\) of the parameters
+indicate the hypothesized causal relationship between the corresponding
+variables \(i\) and \(j\) (i.e.~\(j \rightarrow i\)). \(Y\) is the
+predicted variable (either total biomass or population stability), \(S\)
+the number of species, \(C\) the connectance, and \(N\) the nestedness
+of a food web. The parameters \(\beta_0\), \(\beta_1\), and \(\beta_2\)
+are the intercepts of \(Y\), \(N\), and \(C\),
+respectively.}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.15\columnwidth}\centering
+Model\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_0\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YS}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YC}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YN}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_1\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{NS}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{NC}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_2\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{CS}\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.15\columnwidth}\centering
+Model\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_0\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YS}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YC}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{YN}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_1\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{NS}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{NC}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_2\)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\(\beta_{CS}\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 2\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 3\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 4\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 5\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.15\columnwidth}\centering
+model 6\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
+1\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+These seven structural equation models were fit against both \(Y\)
+variables (i.e.~total biomass and population stability) independently. I
+performed model selection using the Akaike information criterion (AIC)
+for both variables.
+
+\hypertarget{data-and-code-availability}{%
+\subsection{Data and code
+availability}\label{data-and-code-availability}}
+
+All code and data to reproduce this project are available on GitHub
+(https://github.com/FrancisBanville/BIO860M-Project). Simulations and
+analyses were all performed in Julia v.1.5.3, except the structural
+equation modeling which was performed in R v.3.6.1.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{model-selection}{%
+\subsection{Model selection}\label{model-selection}}
+
+The most saturated model (model 6) was the best fit model for both the
+prediction of total biomass and population stability
+(tbl.~\ref{tbl:AIC}). However, model 5 was also a really good fit to the
+data, with a \(\Delta\) AIC of 4.1 for the two predicted variables. In
+both cases, model 6 had an Akaike weight of 88.7\% and model 5 had the
+remaining 11.3\%. Model 6 only differed from model 5 by the imposed
+relationship between species richness and nestedness. Therefore, using
+an ensemble model did not seem necessary to me. Model 6 was thus
+selected as the unique best structural equation model.
+
+\hypertarget{tbl:AIC}{}
+\begin{longtable}[]{@{}cccc@{}}
+\caption{\label{tbl:AIC}\textbf{Model selection.} The difference of AIC
+scores between each model and the best model were computed for the two
+sets of models (i.e.~the predictive models of total biomass and of
+population stability). Model 6 was the best model for both sets
+according to the information criterion.}\tabularnewline
+\toprule
+Model & df & \(\Delta\) AIC\(_{biomass}\) & \(\Delta\)
+AIC\(_{stability}\)\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Model & df & \(\Delta\) AIC\(_{biomass}\) & \(\Delta\)
+AIC\(_{stability}\)\tabularnewline
+\midrule
+\endhead
+6 & 12 & 0 & 0\tabularnewline
+5 & 11 & 4.1 & 4.1\tabularnewline
+4 & 7 & 718.2 & 650.3\tabularnewline
+3 & 7 & 722.5 & 687.3\tabularnewline
+2 & 3 & 1441.3 & 1333.3\tabularnewline
+1 & 3 & 1363.2 & 1332.2\tabularnewline
+0 & 2 & 1475.8 & 1333.1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{path-analysis}{%
+\subsection{Path analysis}\label{path-analysis}}
+
+All direct and indirect relationships between measures of ecosystem
+functioning, biodiversity and food-web structure were analyzed using
+model 6. Regression coefficients between pairs of variables are listed
+in tbl.~\ref{tbl:path_biomass} for the prediction of total biomass and
+in tbl.~\ref{tbl:path_stability} for the prediction of population
+stability.
+
+The total biomass of the community after simulation was positively
+associated with the total number of species and the nestedness of food
+webs at the beginning of the simulation, but negatively associated with
+connectance (tbl.~\ref{tbl:path_biomass}). However, since both measures
+of food-web structure were associated with species richness, species
+richness also shaped total biomass through these indirect pathways.
+
+\hypertarget{tbl:path_biomass}{}
+\begin{longtable}[]{@{}cccc@{}}
+\caption{\label{tbl:path_biomass}\textbf{Results of the path analysis
+for the prediction of total biomass using model 6.} All regression
+coefficients were signifiant at the significance level of \(\alpha\) =
+0.05 (\(Y\) = total biomass, \(S\) = species richness, \(C\) =
+connectance, \(N\) = nestedness). Model 6 was selected according to the
+information criterion.}\tabularnewline
+\toprule
+Coefficient & estimate & z-value & p-value\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Coefficient & estimate & z-value & p-value\tabularnewline
+\midrule
+\endhead
+\(\beta_{YS}\) & 0.12 & 9.5 & \textless{} 0.001***\tabularnewline
+\(\beta_{YC}\) & -36.3 & -6.0 & \textless{} 0.001***\tabularnewline
+\(\beta_{YN}\) & 24.8 & 6.2 & \textless{} 0.001***\tabularnewline
+\(\beta_{NS}\) & 0.001 & 2.5 & 0.01*\tabularnewline
+\(\beta_{NC}\) & 1.2 & 20.4 & \textless{} 0.001***\tabularnewline
+\(\beta_{CS}\) & -0.002 & -8.7 & \textless{} 0.001***\tabularnewline
+\bottomrule
+\end{longtable}
+
+These relationships were weaker when model 6 was used to predict
+population stability (tbl.~\ref{tbl:path_stability}). Population
+stability was not significantly associated with either measure of
+network structure, but was only weakly associated with species richness.
+
+\hypertarget{tbl:path_stability}{}
+\begin{longtable}[]{@{}cccc@{}}
+\caption{\label{tbl:path_stability}\textbf{Results of the path analysis
+for the prediction of population stability using model 6.} All
+regression coefficients were signifiant at the significance level of
+\(\alpha\) = 0.05, except for \(\beta_{YC}\) and \(\beta_{YN}\) (\(Y\) =
+population stability, \(S\) = species richness, \(C\) = connectance,
+\(N\) = nestedness). Model 6 was selected according to the information
+criterion.}\tabularnewline
+\toprule
+Coefficient & estimate & z-value & p-value\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Coefficient & estimate & z-value & p-value\tabularnewline
+\midrule
+\endhead
+\(\beta_{YS}\) & 0.002 & 2.8 & 0.005**\tabularnewline
+\(\beta_{YC}\) & 0.587 & 1.8 & 0.067\tabularnewline
+\(\beta_{YN}\) & -0.082 & -0.4 & 0.700\tabularnewline
+\(\beta_{NS}\) & 0.001 & 2.5 & 0.01*\tabularnewline
+\(\beta_{NC}\) & 1.2 & 20.4 & \textless{} 0.001***\tabularnewline
+\(\beta_{CS}\) & -0.002 & -8.7 & \textless{} 0.001***\tabularnewline
+\bottomrule
+\end{longtable}
+
+Bivariate relationships between measures of ecosystem functioning and
+measures of biodiversity and food-web structure were plotted in
+fig.~\ref{fig:bivariate}. We can identify the positive relationship
+between total biomass and species richness, and its negative
+relationship with connectance. However, the confidence intervals around
+the point estimates of total biomass were wider for food webs with more
+species and narrower for networks with high connectance. On the other
+hand, the weak relationship between population stability and species
+richness is not easily observable in fig.~\ref{fig:bivariate}.
+
+\begin{figure}
+\hypertarget{fig:bivariate}{%
+\centering
+\includegraphics{figures/bivariate_relationships.png}
+\caption{\textbf{Bivariate relationships between food-web measures.}
+(a-b) Relationship between total biomass and (a) species richness and
+(b) connectance. The total biomass of a community represents the sum of
+biomass for all species averaged over the last 10 timesteps of the
+simulations. (c-d) Relationship between population stability and (c)
+species richness and (d) connectance. The temporal stability of
+population biomass was estimated using the negative coefficient of
+variation of biomass across populations averaged over the last 10
+timesteps of the simulations. Species richness and connectance were
+measured before simulating. All simulations (n=221 webs) were run over
+500 timesteps and were repeated 50 times for every food web archived on
+\texttt{mangal.io} (except for the largest web and 13 webs where
+simulation failed). In each panel, error bars indicate the 95\%
+percentile intervals of total biomass and population stability,
+respectively.}\label{fig:bivariate}
+}
+\end{figure}
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+\hypertarget{biodiversity-and-ecosystem-functioning-direct-pathways}{%
+\subsection{Biodiversity and ecosystem functioning: direct
+pathways}\label{biodiversity-and-ecosystem-functioning-direct-pathways}}
+
+My study suggests that biodiversity remains an important driver of
+ecosystem functioning, independently of food-web structure. First, the
+total biomass of a biological community at the end of my simulations
+increased with the total number of species. The positive relationship
+between biomass productivity and species richness uncovered in my study
+was previously observed in various systems and taxa (Mittelbach et al.
+2001) and at different spatial scales (Gonzalez et al. 2020). More
+diverse systems might indeed use resources and nutrients more
+efficiently than homogeneous communities because of niche
+complementarities (Tilman, Wedin, and Knops 1996).
+
+Moreover, I found that the temporal stability of species biomass also
+increased with species richness. This is in agreement with the work of
+Ives, Klug, and Gross (2000) and Gross et al. (2014). Species typically
+have different levels of tolerance to the variation of environmental
+conditions and to the variation of other species' abundances. A decrease
+of biomass from a given species might be compensated by an increase of
+biomass from another species in the community. A high number of species
+might promote ecosystem stability because of a higher probability of
+finding complementary species. However, the positive relationship
+between population stability and species richness uncovered in this
+study seems to be in disagreement with the work of May (1972), Allesina
+and Tang (2012), and MacDonald, Banville, and Poisot (2020), who found
+that the probability of a network to be stable decreases with species
+richness. This might however be due to differences in the definitions
+and measures used to describe ecosystem stability (biomass stability vs
+food-web stability).
+
+The relationship between other measures of biodiversity, such as species
+evenness and measures of \(\beta\)-diversity, and ecosystem functioning
+should also be investigated alongside measures of network structure.
+This might unveil intriguing aspects of the BEF relationship in the
+light of food-web structure.
+
+\hypertarget{biodiversity-and-ecosystem-functioning-indirect-pathways}{%
+\subsection{Biodiversity and ecosystem functioning: indirect
+pathways}\label{biodiversity-and-ecosystem-functioning-indirect-pathways}}
+
+Species richness also drove food-web functioning through indirect
+pathways. For example, species richness was negatively associated with
+food-web connectance, which was positively associated with total
+biomass. This was however in contrast with the relationship between
+species richness and population stability, which did not have any
+indirect pathways through food-web structure.
+
+The bioenergetic model of biomass flows of Yodzis and Innes (1992) and
+Delmas et al. (2017) allowed me to simulate ecosystem functioning of
+many published food webs. This model was useful to make first order
+predictions of total biomass and population stability. However, many
+parameter values were set to their default values or sampled from a
+non-biased distribution (i.e.~a uniform distribution), although they
+were probably system specific. To the best of my knowledge, no empirical
+data was available to validate this choice of parameter values in a
+broad range of food webs. When collecting data on species interactions,
+ecologists should estimate as much as possible the biomass of individual
+species. This would enable the conduction of more extensive studies on
+biodiversity and ecosystem functioning. Overall, my results nevertheless
+highlight the importance of considering network structure when
+describing the biodiversity-ecosystem functioning (BEF) relationship,
+especially with regards to biomass production.
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-Allesina2012StaCrib}{}%
+Allesina, Stefano, and Si Tang. 2012. {``Stability Criteria for Complex
+Ecosystems.''} \emph{Nature} 483 (7388, 7388): 205--8.
+\url{https://doi.org/10.1038/nature10832}.
+
+\leavevmode\hypertarget{ref-Bond2002BioEco}{}%
+Bond, Emily M., and Jonathan M. Chase. 2002. {``Biodiversity and
+Ecosystem Functioning at Local and Regional Spatial Scales.''}
+\emph{Ecology Letters} 5 (4): 467--70.
+\url{https://doi.org/10.1046/j.1461-0248.2002.00350.x}.
+
+\leavevmode\hypertarget{ref-Dangles2004SpeRic}{}%
+Dangles, Olivier, and Björn Malmqvist. 2004. {``Species
+Richness--Decomposition Relationships Depend on Species Dominance.''}
+\emph{Ecology Letters} 7 (5): 395--402.
+\url{https://doi.org/10.1111/j.1461-0248.2004.00591.x}.
+
+\leavevmode\hypertarget{ref-Delmas2021SimBio}{}%
+Delmas, Eva, Azenor Bideault, Tom Clegg, and Timothée Poisot. 2021.
+\emph{Simulations of Biomass Dynamics and Extinctions in Food Webs}.
+Zenodo. \url{https://doi.org/10.5281/zenodo.4426680}.
+
+\leavevmode\hypertarget{ref-Delmas2017SimBio}{}%
+Delmas, Eva, Ulrich Brose, Dominique Gravel, Daniel B. Stouffer, and
+Timothée Poisot. 2017. {``Simulations of Biomass Dynamics in Community
+Food Webs.''} \emph{Methods in Ecology and Evolution} 8 (7): 881--86.
+\url{https://doi.org/10.1111/2041-210X.12713}.
+
+\leavevmode\hypertarget{ref-Dunne2002NetStr}{}%
+Dunne, Jennifer A., Richard J. Williams, and Neo D. Martinez. 2002.
+{``Network Structure and Biodiversity Loss in Food Webs: Robustness
+Increases with Connectance.''} \emph{Ecology Letters} 5 (4): 558--67.
+\url{https://doi.org/10.1046/j.1461-0248.2002.00354.x}.
+
+\leavevmode\hypertarget{ref-Fortuna2010NesModa}{}%
+Fortuna, Miguel A., Daniel B. Stouffer, Jens M. Olesen, Pedro Jordano,
+David Mouillot, Boris R. Krasnov, Robert Poulin, and Jordi Bascompte.
+2010. {``Nestedness Versus Modularity in Ecological Networks: Two Sides
+of the Same Coin?''} \emph{Journal of Animal Ecology} 79 (4): 811--17.
+\url{https://doi.org/10.1111/j.1365-2656.2010.01688.x}.
+
+\leavevmode\hypertarget{ref-Gonzalez2020ScaBio}{}%
+Gonzalez, Andrew, Rachel M. Germain, Diane S. Srivastava, Elise Filotas,
+Laura E. Dee, Dominique Gravel, Patrick L. Thompson, et al. 2020.
+{``Scaling-up Biodiversity-Ecosystem Functioning Research.''}
+\emph{Ecology Letters} 23 (4): 757--76.
+\url{https://doi.org/10.1111/ele.13456}.
+
+\leavevmode\hypertarget{ref-Gomez2011FunCona}{}%
+Gómez, José M., Francisco Perfectti, and Pedro Jordano. 2011. {``The
+Functional Consequences of Mutualistic Network Architecture.''}
+\emph{PLOS ONE} 6 (1): e16143.
+\url{https://doi.org/10.1371/journal.pone.0016143}.
+
+\leavevmode\hypertarget{ref-Gross2014SpeRic}{}%
+Gross, Kevin, Bradley J. Cardinale, Jeremy W. Fox, Andrew Gonzalez,
+Michel Loreau, H. Wayne Polley, Peter B. Reich, and Jasper van Ruijven.
+2014. {``Species Richness and the Temporal Stability of Biomass
+Production: A New Analysis of Recent Biodiversity Experiments.''}
+\emph{The American Naturalist} 183 (1): 1--12.
+\url{https://doi.org/10.1086/673915}.
+
+\leavevmode\hypertarget{ref-Isbell2017LinInf}{}%
+Isbell, Forest, Andrew Gonzalez, Michel Loreau, Jane Cowles, Sandra
+Díaz, Andy Hector, Georgina M. Mace, et al. 2017. {``Linking the
+Influence and Dependence of People on Biodiversity Across Scales.''}
+\emph{Nature} 546 (7656, 7656): 65--72.
+\url{https://doi.org/10.1038/nature22899}.
+
+\leavevmode\hypertarget{ref-Ives2000StaSpe}{}%
+Ives, A. R., J. L. Klug, and K. Gross. 2000. {``Stability and Species
+Richness in Complex Communities.''} \emph{Ecology Letters} 3 (5):
+399--411. \url{https://doi.org/10.1046/j.1461-0248.2000.00144.x}.
+
+\leavevmode\hypertarget{ref-Loreau2000BioEco}{}%
+Loreau, Michel. 2000. {``Biodiversity and Ecosystem Functioning: Recent
+Theoretical Advances.''} \emph{Oikos} 91 (1): 3--17.
+\url{https://doi.org/10.1034/j.1600-0706.2000.910101.x}.
+
+\leavevmode\hypertarget{ref-MacDonald2020RevLin}{}%
+MacDonald, Arthur Andrew Meahan, Francis Banville, and Timothée Poisot.
+2020. {``Revisiting the Links-Species Scaling Relationship in Food
+Webs.''} \emph{Patterns} 0 (0).
+\url{https://doi.org/10.1016/j.patter.2020.100079}.
+
+\leavevmode\hypertarget{ref-May1972WilLar}{}%
+May, Robert M. 1972. {``Will a Large Complex System Be Stable?''}
+\emph{Nature} 238 (5364, 5364): 413--14.
+\url{https://doi.org/10.1038/238413a0}.
+
+\leavevmode\hypertarget{ref-Mittelbach2001WhaObs}{}%
+Mittelbach, Gary G., Christopher F. Steiner, Samuel M. Scheiner,
+Katherine L. Gross, Heather L. Reynolds, Robert B. Waide, Michael R.
+Willig, Stanley I. Dodson, and Laura Gough. 2001. {``What Is the
+Observed Relationship Between Species Richness and Productivity?''}
+\emph{Ecology} 82 (9): 2381--96.
+\url{https://doi.org/10.1890/0012-9658(2001)082\%5B2381:WITORB\%5D2.0.CO;2}.
+
+\leavevmode\hypertarget{ref-Pascual2006EcoNet}{}%
+Pascual, Department of Ecology and Evolutionary Biology Mercedes,
+Mercedes Pascual, Jennifer A. Dunne, Jennifer A. Dunne, and Visiting
+Professor Jennifer A. Dunne. 2006. \emph{Ecological Networks: Linking
+Structure to Dynamics in Food Webs}. Oxford University Press, USA.
+\url{http://books.google.com?id=YpQRDAAAQBAJ}.
+
+\leavevmode\hypertarget{ref-Poisot2016ManMak}{}%
+Poisot, Timothée, Benjamin Baiser, Jennifer A. Dunne, Sonia Kéfi,
+François Massol, Nicolas Mouquet, Tamara N. Romanuk, Daniel B. Stouffer,
+Spencer A. Wood, and Dominique Gravel. 2016. {``Mangal -- Making
+Ecological Network Analysis Simple.''} \emph{Ecography} 39 (4): 384--90.
+\url{https://doi.org/10.1111/ecog.00976}.
+
+\leavevmode\hypertarget{ref-Poisot2014WheEco}{}%
+Poisot, Timothée, and Dominique Gravel. 2014. {``When Is an Ecological
+Network Complex? Connectance Drives Degree Distribution and Emerging
+Network Properties.''} \emph{PeerJ} 2 (February): e251.
+\url{https://doi.org/10.7717/peerj.251}.
+
+\leavevmode\hypertarget{ref-Schleuning2015PreEco}{}%
+Schleuning, Matthias, Jochen Fründ, and Daniel García. 2015.
+{``Predicting Ecosystem Functions from Biodiversity and Mutualistic
+Networks: An Extension of Trait-Based Concepts to Plant--Animal
+Interactions.''} \emph{Ecography} 38 (4): 380--92.
+\url{https://doi.org/10.1111/ecog.00983}.
+
+\leavevmode\hypertarget{ref-Staniczenko2013GhoNesa}{}%
+Staniczenko, Phillip P. A., Jason C. Kopp, and Stefano Allesina. 2013.
+{``The Ghost of Nestedness in Ecological Networks.''} \emph{Nature
+Communications} 4 (1, 1): 1391.
+\url{https://doi.org/10.1038/ncomms2422}.
+
+\leavevmode\hypertarget{ref-Tilman1996ProSus}{}%
+Tilman, David, David Wedin, and Johannes Knops. 1996. {``Productivity
+and Sustainability Influenced by Biodiversity in Grassland
+Ecosystems.''} \emph{Nature} 379 (6567, 6567): 718--20.
+\url{https://doi.org/10.1038/379718a0}.
+
+\leavevmode\hypertarget{ref-Worm2003BioPro}{}%
+Worm, Boris, and J. Emmett Duffy. 2003. {``Biodiversity, Productivity
+and Stability in Real Food Webs.''} \emph{Trends in Ecology \&
+Evolution} 18 (12): 628--32.
+\url{https://doi.org/10.1016/j.tree.2003.09.003}.
+
+\leavevmode\hypertarget{ref-Yodzis1992BodSiz}{}%
+Yodzis, P., and S. Innes. 1992. {``Body Size and Consumer-Resource
+Dynamics.''} \emph{The American Naturalist} 139 (6): 1151--75.
+\url{https://doi.org/10.1086/285380}.
+
+\leavevmode\hypertarget{ref-Zhang2010EffPla}{}%
+Zhang, Chong-Bang, Jiang Wang, Wen-Li Liu, Si-Xi Zhu, Dong Liu, Scott X
+Chang, Jie Chang, and Ying Ge. 2010. {``Effects of Plant Diversity on
+Nutrient Retention and Enzyme Activities in a Full-Scale Constructed
+Wetland.''} \emph{Bioresource Technology} 101 (6): 1686--92.
+\url{https://doi.org/10.1016/j.biortech.2009.10.001}.
+
+\end{CSLReferences}
+
+\end{document}
